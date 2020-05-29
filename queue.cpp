@@ -46,19 +46,20 @@ class Queue
         if(isFull())
         {
             cout<<"\n Queue Overflow";
+            return;
             
         }
         else if(isEmpty())
         {
           f = r = 0;
-          arr[r] = item;             
+                   
         }
         else
         {
             r++;
-            arr[r] = item;
+          
         }
-        // arr[r] = item;
+        arr[r] = item;
     }
     int denqueue()
     {
@@ -73,16 +74,16 @@ class Queue
             denq_value = arr[f];
             arr[f] = 0;
             f = r = -1;
-           return denq_value;
+           
         }
         else
         {
             denq_value = arr[f];
             arr[f] = 0;
             f++;
-            return denq_value;
-            
+                 
         }
+        return denq_value;
     }
     int peek(int pos)
     {
